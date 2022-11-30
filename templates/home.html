@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-info px-5">
+    <div class="container-fluid">
+      <a class="navbar-brand heading fs-4 fw-bold text-light text-uppercase" href="#">Paraphrase Bot</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item my-auto">
+            <div class="my-xl-auto me-3 button-container">
+                <button class="sentence active text-center text-uppercase px-3 py-1 rounded">Sentence</button>    
+            </div>
+          </li>
+          <li class="nav-item py-md-3 py-xl-0">
+              <select class="form-select form-select-sm shadow-none py-2 no-of-sentence" aria-label=".form-select-sm example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="5">Five</option>
+                  <option value="10">Ten</option>
+                  <option value="15">Fifteen</option>
+              </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+  <br>   
+    <div class="row container-fluid body-content">
+        <div class="cont col p-0">
+            <form action="" class="form-floating" method="" class="">
+                <textarea class="form-control pt-4 ps-2 input-container input-text shadow-none" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Input text goes here</label>
+            </form>
+            <div class="bottomContainer px-4 d-flex align-items-center">
+                <p class="fs-5 py-auto mb-0"><span class="fw-bold words">0 </span> words</p>
+                <button type="button" class="paraphrase_btn px-4 py-2 rounded-pill">Paraphrase</button>
+            </div>
+        </div>
+        <div class="col output-container ">
+            <div class="output">
+                <p class="output-text pt-4 ps-2">Paraphrased Text</p>
+            </div>
+            <div class="output-btns px-4 d-flex justify-content-between align-items-center">
+                <div class="output-word-text">
+                    <p class="fs-5 py-auto mb-0"><span class="fw-bold words-out">0 </span> words</p>
+                </div>
+                <div class="output-icons d-flex">
+                    <p class="mb-0"><i class="fs-4 me-2 ri-clipboard-line"></i></p>
+                    <p class="mb-0"><i class="fs-4 ri-download-cloud-line"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
